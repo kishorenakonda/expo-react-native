@@ -2,6 +2,8 @@ import React from "react";
 import { Text, StyleSheet, Button, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
+var externalStyles = require('../css/common-styles');
+
 const WelcomeScreen = ({ navigation }) => {
     // console.log("from welcome screen ==>", props);
     // props is parent object
@@ -10,30 +12,60 @@ const WelcomeScreen = ({ navigation }) => {
     return (
         <View>
             <Text style={styles.text}> Welcome to Image Library App </Text>
-            <Button
-                onPress={() => {
-                    console.log("Clicked on HOME Button")
-                    // props.navigation.navigate('Home')
-                    navigation.navigate('Home')
-                }}
-                style={styles.m_t_10} title="go to home">
-            </Button>
+            <View style={externalStyles.m_t_10}>
+                <Button title="go to home"
+                    onPress={() => {
+                        // props.navigation.navigate('Home')
+                        navigation.navigate('Home')
+                    }}
+                >
+                </Button>
+            </View>
 
-            <Button
-                onPress={() => {
-                    console.log("Clicked on List Button")
-                    navigation.navigate('List')
-                }}
-                style={styles.m_t_10} title="go to name list">
-            </Button>
+            <View style={externalStyles.m_t_10}>
+                <Button title="go to name list"
+                    onPress={() => {
+                        navigation.navigate('List')
+                    }}
+                >
+                </Button>
+            </View>
 
-            <Button
-                onPress={() => {
-                    console.log("Clicked on image List Button")
-                    navigation.navigate('Image')
-                }}
-                style={styles.m_t_10} title="go to images list">
-            </Button>
+            <View style={externalStyles.m_t_10}>
+                <Button title="go to images list"
+                    onPress={() => {
+                        navigation.navigate('Image')
+                    }}
+                >
+                </Button>
+            </View>
+
+            <View style={externalStyles.m_t_10}>
+                <Button title="go to counter"
+                    onPress={() => {
+                        navigation.navigate('Counter')
+                    }}
+                >
+                </Button>
+            </View>
+
+            <View style={externalStyles.m_t_10}>
+                <Button title="go to color"
+                    onPress={() => {
+                        navigation.navigate('Colors')
+                    }}
+                >
+                </Button>
+            </View>
+
+            <View style={externalStyles.m_t_10}>
+                <Button title="go to color adjuster"
+                    onPress={() => {
+                        navigation.navigate('ColorAdjuster')
+                    }}
+                >
+                </Button>
+            </View>
 
             {/* TouchableOpacity will give the touch feel for the element */}
             {/* <TouchableOpacity
