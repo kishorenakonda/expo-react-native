@@ -10,6 +10,8 @@ import ListScreen from './src/screens/ListScreen';
 import WelcomeScreen from './src/screens/WelcomeScreen';
 import ColorAdjusterScreen from './src/screens/ColorAdjusterScreen';
 import ColorsScreen from './src/screens/ColorsScreen';
+import ColorAdjusterScreenWithReducer from './src/screens/ColorAdjusterScreenWithReducer';
+import TextScreen from './src/screens/TextScreen';
 
 const navigator = createStackNavigator(
   {
@@ -20,7 +22,9 @@ const navigator = createStackNavigator(
     Image: ImageScreen,
     Counter: CounterScreen,
     Colors: ColorsScreen,
-    ColorAdjuster: ColorAdjusterScreen
+    ColorAdjuster: ColorAdjusterScreen,
+    ColorAdjusterWithReducer: ColorAdjusterScreenWithReducer,
+    Text: TextScreen
   },
   {
     initialRouteName: "Welcome",

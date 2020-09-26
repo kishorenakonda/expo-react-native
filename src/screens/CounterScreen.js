@@ -1,6 +1,7 @@
 // {React , useState} // not applicable , it is throwing error and not rendering the page
 import React, { useState } from "react";
 import { Text, StyleSheet, Button, View } from "react-native";
+import CounterScreenWithReducer from "./CounterScreenWithReducer";
 
 // External Stylesheet
 var styles = require('../css/common-styles');
@@ -46,6 +47,11 @@ const CounterScreen = () => {
                     <Text> Counter Value : </Text>
                     <Text style={styles.text}> {counter} </Text>
                 </View>
+            </View>
+
+            <View>
+                <Text> Counter Screen Using reducer </Text>
+                <CounterScreenWithReducer></CounterScreenWithReducer>
             </View>
         </View>
     )

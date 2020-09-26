@@ -61,7 +61,16 @@ const WelcomeScreen = ({ navigation }) => {
             <View style={externalStyles.m_t_10}>
                 <Button title="go to color adjuster"
                     onPress={() => {
-                        navigation.navigate('ColorAdjuster')
+                        navigation.navigate('ColorAdjusterWithReducer')
+                    }}
+                >
+                </Button>
+            </View>
+
+            <View style={externalStyles.m_t_10}>
+                <Button title="go to text"
+                    onPress={() => {
+                        navigation.navigate('Text')
                     }}
                 >
                 </Button>
