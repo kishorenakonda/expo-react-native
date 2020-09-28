@@ -1,8 +1,9 @@
 import React from "react";
 import { Text, StyleSheet, Button, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import externalStyles from '../css/common-styles';
 
-var externalStyles = require('../css/common-styles');
+// var externalStyles = require('../css/common-styles');
 
 const WelcomeScreen = ({ navigation }) => {
     // console.log("from welcome screen ==>", props);
@@ -71,6 +72,15 @@ const WelcomeScreen = ({ navigation }) => {
                 <Button title="go to text"
                     onPress={() => {
                         navigation.navigate('Text')
+                    }}
+                >
+                </Button>
+            </View>
+
+            <View style={externalStyles.m_t_10}>
+                <Button title="go to Login"
+                    onPress={() => {
+                        navigation.navigate('Login')
                     }}
                 >
                 </Button>
