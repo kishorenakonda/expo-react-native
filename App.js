@@ -13,8 +13,7 @@ import ColorsScreen from './src/screens/ColorsScreen';
 import ColorAdjusterScreenWithReducer from './src/screens/ColorAdjusterScreenWithReducer';
 import TextScreen from './src/screens/TextScreen';
 import LoginScreen from './src/screens/LoginScreen';
-
-
+import BoxScreen from './src/screens/BoxScreen';
 
 const navigator = createStackNavigator(
   {
@@ -28,7 +27,8 @@ const navigator = createStackNavigator(
     ColorAdjuster: ColorAdjusterScreen,
     ColorAdjusterWithReducer: ColorAdjusterScreenWithReducer,
     Text: TextScreen,
-    Login: LoginScreen
+    Login: LoginScreen,
+    Box: BoxScreen,
   },
   {
     initialRouteName: "Welcome",

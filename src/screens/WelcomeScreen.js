@@ -86,6 +86,15 @@ const WelcomeScreen = ({ navigation }) => {
                 </Button>
             </View>
 
+            <View style={externalStyles.m_t_10}>
+                <Button title="go to Box"
+                    onPress={() => {
+                        navigation.navigate('Box')
+                    }}
+                >
+                </Button>
+            </View>
+
             {/* TouchableOpacity will give the touch feel for the element */}
             {/* <TouchableOpacity
                 onPress={() => {
