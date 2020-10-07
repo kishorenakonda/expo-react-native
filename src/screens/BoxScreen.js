@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import externalStyles from '../css/common-styles';
 
 export default class BoxScreen extends Component {
     constructor() {
@@ -7,6 +8,7 @@ export default class BoxScreen extends Component {
     }
 
     render() {
+
         const styles = StyleSheet.create({
             p_lr_10: {
                 paddingHorizontal: 10
@@ -25,24 +27,38 @@ export default class BoxScreen extends Component {
                 marginHorizontal: 20 // Shorthand property for margin left and right
             },
             flexViewStyle: {
-                alignItems: 'stretch' // It is the default value set for an view property
+                // height: 200, // once height is set for the view , then we can able to see the difference in flex properties
+                // alignItems: 'stretch' // It is the default value set for an view property
                 // alignItems: 'flex-start'
                 // alignItems: 'center'
-                // alignItems: 'flex-end'
+                // alignItems: 'flex-end',
+
+                // flexDirection: 'column' // it is will consider entire page as one column (Default Property)
+                // flexDirection: 'row'
+
+                // justifyContent: 'flex-start', // It is the default value set for an view property
+                // justifyContent: 'center',                
+                // justifyContent: "space-between"
+                // justifyContent: "space-around"
+                // justifyContent: "space-evenly"
             }
         });
 
+        // In parent flex properties like (alignItems, justifyContent, flexDirection)
+        // In Child flex properties like (flex, alignSelf)
+
         return (
             // if you want to apply multiple styles / class for single element use [] (array)
-            <View style={[styles.p_lr_10, styles.p_t_10]}>
+            <View style={[styles.p_lr_10, externalStyles.m_t_20]}>
                 <View style={styles.viewStyle}>
                     <Text style={styles.textStyle}> Box Screen </Text>
-                </View>
 
-                <View style={styles.flexViewStyle}>
-                    <Text style={styles.textStyle}> Text 1 </Text>
-                    <Text style={styles.textStyle}> Text 1331 </Text>
-                    <Text style={styles.textStyle}> Text 14r </Text>
+
+                    <View style={styles.flexViewStyle}>
+                        <Text style={styles.textStyl}> Text 1 </Text>
+                        <Text style={styles.textStyl}> Text 1331 </Text>
+                        <Text style={styles.textStyl}> Text 14r </Text>
+                    </View>
                 </View>
             </View>
         )

@@ -14,6 +14,7 @@ import ColorAdjusterScreenWithReducer from './src/screens/ColorAdjusterScreenWit
 import TextScreen from './src/screens/TextScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import BoxScreen from './src/screens/BoxScreen';
+import { FlexBoxExerciseScreen } from './src/screens/FlexBoxExerciseScreen';
 
 const navigator = createStackNavigator(
   {
@@ -29,6 +30,7 @@ const navigator = createStackNavigator(
     Text: TextScreen,
     Login: LoginScreen,
     Box: BoxScreen,
+    Flexbox: FlexBoxExerciseScreen
   },
   {
     initialRouteName: "Welcome",

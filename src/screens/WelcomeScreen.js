@@ -95,6 +95,15 @@ const WelcomeScreen = ({ navigation }) => {
                 </Button>
             </View>
 
+            <View style={externalStyles.m_t_10}>
+                <Button title="go to flex Box"
+                    onPress={() => {
+                        navigation.navigate('Flexbox')
+                    }}
+                >
+                </Button>
+            </View>
+
             {/* TouchableOpacity will give the touch feel for the element */}
             {/* <TouchableOpacity
                 onPress={() => {
